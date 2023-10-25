@@ -19,6 +19,12 @@ const options = {
     // Task 6: Create an `removePhoto()` case reducer that removes a photo from state.photos
     // Task 6 Hint: You can use state.photos.splice()
     // `splice()` documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+    removePhoto: (state, action) => {
+      state.photos.splice(
+        state.photos.findIndex((photo) => photo.id === action.payload),
+        1
+      );
+    },
   },
 };
 
