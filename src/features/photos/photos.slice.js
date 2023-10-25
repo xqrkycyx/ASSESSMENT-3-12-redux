@@ -13,6 +13,9 @@ const options = {
     // Task 1: Create an `addPhoto()` case reducer that adds a photo to state.photos.
     // Task 1 Hint: You can use state.photos.unshift()
     // `unshift()` documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
+    addPhoto: (state, action) => {
+      state.photos.unshift(action.payload);
+    },
     // Task 6: Create an `removePhoto()` case reducer that removes a photo from state.photos
     // Task 6 Hint: You can use state.photos.splice()
     // `splice()` documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
