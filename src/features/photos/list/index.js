@@ -1,15 +1,18 @@
 import { useSelector, useDispatch } from "react-redux";
 import {
   // Task 7: Import the `removePhoto()` action creator from the photos slice
-  selectAllPhotos,
+
   removePhoto,
   // Task 13: Import the `selectFilteredPhotos()` selector from the photos slice
+  // selectAllPhotos, // TEMPORARILY COMMENTING OUT FOR TESTING IN DEVELOPMENT
+  selectFilteredPhotos,
 } from "../photos.slice";
 import "./list.css";
 
 export default function PhotosList() {
   // Task 14: Call `useSelector()` below with `selectFilteredPhotos` instead of `selectAllPhotos`
-  const photos = useSelector(selectAllPhotos);
+  // const photos = useSelector(selectAllPhotos); // TEMPORARILY COMMENTING OUT FOR TESTING IN DEVELOPMENT
+  const photos = useSelector(selectFilteredPhotos);
   // Task 8: Store a reference to the Redux store's dispatch method in a variable called `dispatch`
   const dispatch = useDispatch();
 
