@@ -1,6 +1,6 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { selectSearchTerm, setSearchTerm } from '../search.slice';
-import './search-bar.css';
+import { useDispatch, useSelector } from "react-redux";
+import { selectSearchTerm, setSearchTerm } from "../search.slice";
+import "./search-bar.css";
 
 export default function SearchBar() {
   const searchTerm = useSelector(selectSearchTerm);

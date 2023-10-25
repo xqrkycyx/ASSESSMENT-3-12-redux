@@ -1,11 +1,11 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  searchTerm: '',
+  searchTerm: "",
 };
 
 const options = {
-  name: 'search',
+  name: "search",
   initialState,
   reducers: {
     setSearchTerm: (state, action) => {

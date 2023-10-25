@@ -1,8 +1,8 @@
-import CreatePhoto from './features/photos/create';
-import PhotosList from './features/photos/list';
-import Suggestion from './features/suggestion';
-import SearchBar from './features/search/search-bar';
-import './App.css';
+import CreatePhoto from "./features/photos/create";
+import PhotosList from "./features/photos/list";
+import Suggestion from "./features/suggestion";
+import SearchBar from "./features/search/search-bar";
+import "./App.css";
 
 function App() {
   return (

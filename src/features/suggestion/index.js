@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   fetchSuggestion,
   selectError,
   selectLoading,
   // Task 18: Import the `selectSuggestion()` selector from the suggestion slice
-} from './suggestion.slice';
-import './suggestion.css';
+} from "./suggestion.slice";
+import "./suggestion.css";
 
 export default function Suggestion() {
   // Task 19: Call useSelector() with the selectSuggestion() selector

@@ -1,17 +1,17 @@
-import userEvent from '@testing-library/user-event';
+import userEvent from "@testing-library/user-event";
 
-import photos from '../photos/photos.data';
-import { render, screen } from '../../test-utils';
-import App from '../../App';
+import photos from "../photos/photos.data";
+import { render, screen } from "../../test-utils";
+import App from "../../App";
 
-test('displays the dogs that match the user-provided search term', async () => {
+test("displays the dogs that match the user-provided search term", async () => {
   render(<App />);
 
   photos.forEach((photo) =>
     expect(screen.getByText(photo.caption)).toBeInTheDocument()
   );
 
-  const searchTerm = 'terrier';
+  const searchTerm = "terrier";
   const filtered = photos.filter((photo) =>
     photo.caption.toLowerCase().includes(searchTerm)
   );
@@ -20,8 +20,8 @@ test('displays the dogs that match the user-provided search term', async () => {
   );
 
   await userEvent.type(
-    screen.getByRole('searchbox', { name: /Search by caption:/i }),
-    'terrier'
+    screen.getByRole("searchbox", { name: /Search by caption:/i }),
+    "terrier"
   );
 
   filtered.forEach((photo) =>

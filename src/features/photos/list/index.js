@@ -1,10 +1,10 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import {
   // Task 7: Import the `removePhoto()` action creator from the photos slice
   selectAllPhotos,
   // Task 13: Import the `selectFilteredPhotos()` selector from the photos slice
-} from '../photos.slice';
-import './list.css';
+} from "../photos.slice";
+import "./list.css";
 
 export default function PhotosList() {
   // Task 14: Call `useSelector()` below with `selectFilteredPhotos` instead of `selectAllPhotos`
@@ -22,7 +22,8 @@ export default function PhotosList() {
         <p>{caption}</p>
         <button
           data-testid={`${caption}-button`}
-          onClick={() => handleDeleteButtonClick(id)}>
+          onClick={() => handleDeleteButtonClick(id)}
+        >
           Delete
         </button>
       </div>

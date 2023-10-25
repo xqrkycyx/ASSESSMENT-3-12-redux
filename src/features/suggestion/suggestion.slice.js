@@ -1,16 +1,16 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const fetchSuggestion =
   createAsyncThunk(/* Task 15: Complete the `createAsyncThunk()` function to load a suggestion from this URL: http://localhost:3004/api/suggestion */);
 
 const initialState = {
-  suggestion: '',
+  suggestion: "",
   loading: false,
   error: true,
 };
 
 const options = {
-  name: 'suggestion',
+  name: "suggestion",
   initialState,
   reducers: {},
   extraReducers: {
